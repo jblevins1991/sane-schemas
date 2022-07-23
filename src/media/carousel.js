@@ -1,14 +1,18 @@
-export const carouselSchema = {
+export const Carousel = {
     title: 'Carousel',
     name: 'carousel',
     type: 'document',
     fields: [
-        // @todo: m2m relationship
         {
             title: 'Images',
             name: 'images',
-            type: 'reference',
-            to: [{ type: 'a11y-image' }]
+            type: 'array',
+            of: [{
+                type: 'reference',
+                to: [{
+                    type: 'a11y_image'
+                }]
+            }]
         }
     ]
 }

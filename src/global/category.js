@@ -1,4 +1,4 @@
-export const categorySchema = {
+export const Category = {
     title: 'Category',
     name: 'category',
     type: 'document',

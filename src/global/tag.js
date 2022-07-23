@@ -1,4 +1,4 @@
-export const tagSchema = {
+export const Tag = {
     title: 'Tag',
     name: 'tag',
     type: 'document',

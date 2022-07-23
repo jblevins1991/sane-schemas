@@ -1,4 +1,4 @@
-export const variantSchema = {
+export const Variant = {
     title: 'Variant',
     name: 'variant',
     type: 'document',

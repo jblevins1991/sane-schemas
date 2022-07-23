@@ -1,4 +1,4 @@
-export const faqSchema = {
+export const FaqSchema = {
     title: 'Frequently Asked Questions',
     name: 'faq',
     type: 'document',

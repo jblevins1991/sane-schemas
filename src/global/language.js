@@ -1,12 +1,12 @@
-export const languageSchema = {
+export const Language = {
     title: 'Language',
     name: 'language',
     type: 'document',
     fields: [
         {
-            title: '',
-            name: '',
-            type: ''
-        },
+            title: 'Name',
+            name: 'name',
+            type: 'string'
+        }
     ]
 }

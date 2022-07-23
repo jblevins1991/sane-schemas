@@ -1,4 +1,4 @@
-export const postSchema = {
+export const Post = {
     title: 'Post',
     name: 'post',
     type: 'document',
@@ -27,43 +27,60 @@ export const postSchema = {
         {
             title: 'Date Published',
             name: 'datePublished',
-            type: 'date'
+            type: 'date',
+            required: true
         },
         {
             title: 'Last Updated',
             name: 'lastUpdated',
-            type: 'date'
+            type: 'date',
+            required: true
         },
         {
             title: 'Thumbnail',
             name: 'thumbnail',
             type: 'reference',
-            to: [{ type: 'a11y-image' }]
+            to: [{ type: 'a11y_image' }]
         },
         {
             title: 'Category',
             name: 'category',
-            type: 'reference',
-            to: [{ type: 'category' }]
+            type: 'array',
+            of: [{
+                type: 'reference',
+                to: [{ type: 'category' }]
+            }]
         },
         {
             title: 'Tags',
             name: 'tags',
-            type: 'reference',
-            to: [{ type: 'tag' }]
+            type: 'array',
+            of: [{
+                type: 'reference',
+                to: [{ type: 'tag' }]
+            }]
         },
         {
             title: 'Author',
             name: 'author',
             type: 'reference',
-            to: [{ type: 'author' }]
+            to: [{ type: 'author' }],
+            required: true
         },
-        // @todo: m2m issues...ugh
+        {
+            title: 'Content',
+            name: 'content',
+            type: 'block',
+            required: true
+        },
         {
             title: 'Related Articles',
             name: 'related',
-            type: 'reference',
-            to: [{ type: 'post' }]
+            type: 'array',
+            of: [{
+                type: 'reference',
+                to: [{ type: 'post' }]
+            }]
         }
     ]
 }

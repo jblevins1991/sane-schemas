@@ -1,4 +1,4 @@
-export const authorSchema = {
+export const Author = {
     title: 'Author',
     name: 'author',
     type: 'document',

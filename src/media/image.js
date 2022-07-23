@@ -1,6 +1,6 @@
-export const imageSchema = {
+export const Image = {
     title: 'A11y Image',
-    name: 'a11y-image',
+    name: 'a11y_image',
     type: 'document',
     fields: [
         {
@@ -9,16 +9,15 @@ export const imageSchema = {
             type: 'string'
         },
         {
-            title: 'Tags',
-            name: 'tags',
-            type: 'reference',
-            to: [{ type: 'tag' }]
-        },
-        {
             title: 'Variant',
             name: 'variant',
-            type: 'reference',
-            to: [{ type: 'variant' }]
+            type: 'array',
+            of: [{
+                type: 'reference',
+                to: [{
+                    type: 'variant'
+                }]
+            }]
         }
     ]
 };
