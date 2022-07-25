@@ -1,18 +1,20 @@
-import { authorSchema } from "../content/author";
-import { postSchema } from "../content/post";
-import { categorySchema } from "../global/category";
-import { languageSchema } from "../global/language";
-import { carouselSchema } from "../media/carousel";
-import { imageSchema } from "../media/image";
-import { variantSchema } from "../media/variant";
+import { Author } from "../content/author";
+import { Post } from "../content/post";
+import { Category } from "../global/category";
+import { Language } from "../global/language";
+import { Tag } from "../global/tag";
+import { Carousel } from "../media/carousel";
+import { Image } from "../media/image";
+import { Variant } from "../media/variant";
 
-export const blogSchema = {
-    authorSchema,
-    postSchema,
-    categorySchema,
-    languageSchema,
-    tagSchema,
-    carouselSchema,
-    imageSchema,
-    variantSchema,
+export const BlogSchema = {
+    Author,
+    Post,
+    Category,
+    Language,
+    Tag,
+    TagSchema,
+    Carousel,
+    Image,
+    Variant,
 };
