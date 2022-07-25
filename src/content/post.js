@@ -21,20 +21,18 @@ export const Post = {
         },
         {
             title: 'Canonical URL',
-            name: 'canonicalUrl',
+            name: 'canonical_url',
             type: 'string'
         },
         {
             title: 'Date Published',
-            name: 'datePublished',
-            type: 'date',
-            required: true
+            name: 'date_published',
+            type: 'date'
         },
         {
             title: 'Last Updated',
-            name: 'lastUpdated',
-            type: 'date',
-            required: true
+            name: 'last_updated',
+            type: 'date'
         },
         {
             title: 'Thumbnail',
@@ -65,13 +63,12 @@ export const Post = {
             name: 'author',
             type: 'reference',
             to: [{ type: 'author' }],
-            required: true
         },
         {
             title: 'Content',
             name: 'content',
-            type: 'block',
-            required: true
+            type: 'array', 
+            of: [{type: 'block'}]
         },
         {
             title: 'Related Articles',
