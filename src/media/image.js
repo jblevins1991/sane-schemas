@@ -1,3 +1,5 @@
+import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
+
 export const Image = {
     title: 'A11y Image',
     name: 'a11y_image',
@@ -7,6 +9,7 @@ export const Image = {
             title: 'Alternative Text',
             name: 'alt',
             type: 'string',
+            inputComponent: TextFieldWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .max(125)
