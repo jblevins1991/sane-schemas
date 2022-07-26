@@ -2,11 +2,11 @@ import React from 'react';
 import { useId } from '@reach/auto-id';
 
 import { FormField } from '@sanity/base/components';
-import { Text, TextInput } from '@sanity/ui';
+import { Text, TextArea } from '@sanity/ui';
 
 import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
 
-export const TextFieldWithMaxCounter = React.forwardRef((props, ref) => {
+export const TextareaWithMaxCounter = React.forwardRef((props, ref) => {
     const id = useId();
 
     const {
@@ -43,7 +43,7 @@ export const TextFieldWithMaxCounter = React.forwardRef((props, ref) => {
         __unstable_markers={markers}
         __unstable_presence={presence}
     >
-        <TextInput
+        <TextArea
             id={id}
             onBlur={onBlur}
             onChange={handleChange}

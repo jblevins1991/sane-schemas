@@ -1,3 +1,4 @@
+import { TextareaWithMaxCounter } from "../inputs/TextareaWithMaxCounter";
 import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
 
 export const Author = {
@@ -28,7 +29,7 @@ export const Author = {
             title: 'Bio',
             name: 'bio',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
+            inputComponent: TextareaWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .min(50)
