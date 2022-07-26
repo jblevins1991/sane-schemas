@@ -1,4 +1,5 @@
 import React from 'react';
+import { useId } from '@reach/auto-id';
 
 import {
     FormField,
@@ -9,7 +10,7 @@ import {
 import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
 
 export const TextFieldWithMaxCounter = React.forwardRef((props, ref) => {
-    const id = React.useId();
+    const id = useId();
 
     const {
         onBlur,

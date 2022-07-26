@@ -1,6 +1,6 @@
 {
   "name": "sane-schemas",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Sanity.io schemas for those who want their schemas to have ada a11y and seo concerns baked in.",
   "main": "dist/sane-schemas.cjs.js",
   "browser": "dist/sane-schemas.umd.js",
