@@ -6,7 +6,11 @@ export const Image = {
         {
             title: 'Alternative Text',
             name: 'alt',
-            type: 'string'
+            type: 'string',
+            validation: (Rule) => Rule
+                .required()
+                .max(125)
+                .error('Alternative text of no more than 125 characters is required.')
         },
         {
             title: 'Variant',

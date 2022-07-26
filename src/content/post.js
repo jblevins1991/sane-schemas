@@ -6,12 +6,21 @@ export const Post = {
         {
             title: 'Title',
             name: 'title',
-            type: 'string'
+            type: 'string',
+            validation: (Rule) => Rule
+                .required()
+                .min(50)
+                .max(60)
+                .error('A title between 50 and 60 characters is required.')
         },
         {
             title: 'Description',
             name: 'description',
-            type: 'string'
+            type: 'string',
+            validation: (Rule) => Rule
+                .required()
+                .max(160)
+                .error('A description of no more than 155 characters is required.')
         },
         {
             title: 'Language',
@@ -27,18 +36,30 @@ export const Post = {
         {
             title: 'Date Published',
             name: 'date_published',
-            type: 'date'
+            type: 'date',
+            validation: (Rule) => Rule
+                .required()
+                .error('Date published is required.'),
+            initialValue: (new Date()).toISOString(),
         },
         {
             title: 'Last Updated',
             name: 'last_updated',
-            type: 'date'
+            type: 'date',
+            validation: (Rule) => Rule
+                .required()
+                .min(Rule.valueOfField('date_published'))
+                .error('Last Updated is required.'),
+            initialValue: (new Date()).toISOString(),
         },
         {
             title: 'Thumbnail',
             name: 'thumbnail',
             type: 'reference',
-            to: [{ type: 'a11y_image' }]
+            to: [{ type: 'a11y_image' }],
+            validation: (Rule) => Rule
+                .required()
+                .error('Thumbnail is required.')
         },
         {
             title: 'Category',
@@ -47,7 +68,10 @@ export const Post = {
             of: [{
                 type: 'reference',
                 to: [{ type: 'category' }]
-            }]
+            }],
+            validation: (Rule) => Rule
+                .required()
+                .error('Category is required.')
         },
         {
             title: 'Tags',
