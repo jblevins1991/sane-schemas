@@ -1,61 +1,63 @@
-import React from 'react';
-import { useId } from '@reach/auto-id';
+// import React from 'react';
+// import { useId } from '@reach/auto-id';
 
-import { FormField } from '@sanity/base/components';
-import { Text, TextArea } from '@sanity/ui';
+// import { FormField } from '@sanity/base/components';
+// import { Text, TextArea } from '@sanity/ui';
 
-import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
+// import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
 
-export const TextareaWithMaxCounter = React.forwardRef((props, ref) => {
-    const id = useId();
+// export const TextareaWithMaxCounter = React.forwardRef((props, ref) => {
+//     const id = useId();
 
-    const {
-        onBlur,
-        onChange,
-        onFocus,
-        markers,
-        placeholder,
-        presence,
-        readOnly,
-        type,
-        value
-    } = props;
+//     const {
+//         onBlur,
+//         onChange,
+//         onFocus,
+//         markers,
+//         placeholder,
+//         presence,
+//         readOnly,
+//         type,
+//         value
+//     } = props;
 
-    const {
-        description,
-        title,
-    } = type;
+//     const {
+//         description,
+//         title,
+//     } = type;
 
-    const handleChange = React.useCallback((event) => {
-        const value = event.currentTarget.value;
+//     const handleChange = React.useCallback((event) => {
+//         const value = event.currentTarget.value;
 
-        onChange(
-            PatchEvent.from(value ? set(value) : unset)
-        );
-    }, [onChange]);
+//         onChange(
+//             PatchEvent.from(value ? set(value) : unset)
+//         );
+//     }, [onChange]);
 
-    const max = type.validation[0]._rules.filter(rule => rule.flag == 'max')[0].constraint;
+//     const max = type.validation[0]._rules.filter(rule => rule.flag == 'max')[0].constraint;
 
-    return <FormField
-        description={description}
-        inputId={id}
-        title={title}
-        __unstable_markers={markers}
-        __unstable_presence={presence}
-    >
-        <TextArea
-            id={id}
-            onBlur={onBlur}
-            onChange={handleChange}
-            onFocus={onFocus}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            value={value}
-            ref={ref}
-        />
+//     return <Stack>
+//         <FormField
+//             description={description}
+//             inputId={id}
+//             title={title}
+//             __unstable_markers={markers}
+//             __unstable_presence={presence}
+//         >
+//             <TextArea
+//                 id={id}
+//                 onBlur={onBlur}
+//                 onChange={handleChange}
+//                 onFocus={onFocus}
+//                 placeholder={placeholder}
+//                 readOnly={readOnly}
+//                 value={value}
+//                 ref={ref}
+//             />
 
-        <Text size={1}>
-            {value ? value.length : '0'} / {max}
-        </Text>
-    </FormField>;
-});
+//             <Text size={1}>
+//                 {value ? value.length : '0'} / {max}
+//             </Text>
+//         </FormField>
+//     </Stack>;
+// });

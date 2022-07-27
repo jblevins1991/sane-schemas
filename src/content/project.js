@@ -1,6 +1,6 @@
-import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
+// import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
 
-export const projectSchema = {
+export const Project = {
     title: 'Project',
     name: 'project',
     type: 'document',
@@ -9,7 +9,7 @@ export const projectSchema = {
             title: 'Title',
             name: 'title',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
+            // inputComponent: TextFieldWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .min(50)
@@ -84,7 +84,7 @@ export const projectSchema = {
             title: 'Description',
             name: 'description',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
+            // inputComponent: TextFieldWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .max(160)

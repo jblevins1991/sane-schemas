@@ -1,4 +1,5 @@
-import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
+// import { TextareaWithMaxCounter } from "../inputs/TextareaWithMaxCounter";
+// import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
 
 export const Post = {
     title: 'Post',
@@ -9,22 +10,32 @@ export const Post = {
             title: 'Title',
             name: 'title',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
-            validation: (Rule) => Rule
-                .required()
-                .min(50)
-                .max(60)
-                .error('A title between 50 and 60 characters is required.')
+            validation: (Rule) => [
+                Rule
+                    .required()
+                    .error('A title is required.'),
+                Rule
+                    .min(50)
+                    .error('A title of no less than 50 characters is required.'),
+                Rule
+                    .max(60)
+                    .warning('A title of no more than 60 characters is required.'),
+            ],
+            // inputComponent: TextFieldWithMaxCounter,
         },
         {
             title: 'Description',
             name: 'description',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
-            validation: (Rule) => Rule
-                .required()
-                .max(160)
-                .error('A description of no more than 155 characters is required.')
+            validation: (Rule) => [
+                Rule
+                    .required()
+                    .error('A description is required.'),
+                Rule
+                    .max(160)
+                    .error('A description of no more than 155 characters is required.'),
+            ],
+            // inputComponent: TextareaWithMaxCounter,
         },
         {
             title: 'Language',

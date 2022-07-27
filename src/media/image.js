@@ -9,7 +9,7 @@ export const Image = {
             title: 'Alternative Text',
             name: 'alt',
             type: 'string',
-            inputComponent: TextFieldWithMaxCounter,
+            // inputComponent: TextFieldWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .max(125)

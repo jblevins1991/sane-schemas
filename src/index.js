@@ -1,8 +1,7 @@
 export { Author } from './content/author';
+export { FAQ } from './content/faq';
 export { Post } from './content/post';
-export { Product } from './content/product';
-export { ProductVariant } from './content/productVariant';
-export { Review } from './content/review';
+export { Project } from './content/project';
 
 export { Category } from './global/category';
 export { Language } from './global/language';
