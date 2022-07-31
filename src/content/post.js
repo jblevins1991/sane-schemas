@@ -1,72 +1,21 @@
 // import { TextareaWithMaxCounter } from "../inputs/TextareaWithMaxCounter";
 // import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
 
+import { blockField } from "../fields/block";
+import { canaonicalUrlField, datePublishedField, descriptionField, languageField, lastUpdatedField, slugField, titleField } from "../fields/seo";
+
 export const Post = {
     title: 'Post',
     name: 'post',
     type: 'document',
     fields: [
-        {
-            title: 'Title',
-            name: 'title',
-            type: 'string',
-            validation: (Rule) => [
-                Rule
-                    .required()
-                    .error('A title is required.'),
-                Rule
-                    .min(50)
-                    .error('A title of no less than 50 characters is required.'),
-                Rule
-                    .max(60)
-                    .warning('A title of no more than 60 characters is required.'),
-            ],
-            // inputComponent: TextFieldWithMaxCounter,
-        },
-        {
-            title: 'Description',
-            name: 'description',
-            type: 'string',
-            validation: (Rule) => [
-                Rule
-                    .required()
-                    .error('A description is required.'),
-                Rule
-                    .max(160)
-                    .error('A description of no more than 155 characters is required.'),
-            ],
-            // inputComponent: TextareaWithMaxCounter,
-        },
-        {
-            title: 'Language',
-            name: 'language',
-            type: 'reference',
-            to: [{ type: 'language' }]
-        },
-        {
-            title: 'Canonical URL',
-            name: 'canonical_url',
-            type: 'string'
-        },
-        {
-            title: 'Date Published',
-            name: 'date_published',
-            type: 'date',
-            validation: (Rule) => Rule
-                .required()
-                .error('Date published is required.'),
-            initialValue: (new Date()).toISOString(),
-        },
-        {
-            title: 'Last Updated',
-            name: 'last_updated',
-            type: 'date',
-            validation: (Rule) => Rule
-                .required()
-                .min(Rule.valueOfField('date_published'))
-                .error('Last Updated is required.'),
-            initialValue: (new Date()).toISOString(),
-        },
+        titleField,
+        slugField,
+        descriptionField,
+        languageField,
+        canaonicalUrlField,
+        datePublishedField,
+        lastUpdatedField,
         {
             title: 'Thumbnail',
             name: 'thumbnail',
@@ -103,12 +52,7 @@ export const Post = {
             type: 'reference',
             to: [{ type: 'author' }],
         },
-        {
-            title: 'Content',
-            name: 'content',
-            type: 'array', 
-            of: [{type: 'block'}]
-        },
+        blockField,
         {
             title: 'Related Articles',
             name: 'related',

@@ -1,21 +1,15 @@
 // import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
 
+import { descriptionField, slugField, titleField } from "../fields/seo";
+
 export const Project = {
     title: 'Project',
     name: 'project',
     type: 'document',
     fields: [
-        {
-            title: 'Title',
-            name: 'title',
-            type: 'string',
-            // inputComponent: TextFieldWithMaxCounter,
-            validation: (Rule) => Rule
-                .required()
-                .min(50)
-                .max(60)
-                .error('A title of no less than 50 characters and no more than 60 characters is required.')
-        },
+        titleField,
+        slugField,
+        descriptionField,
         {
             title: 'Technology',
             name: 'technology',
@@ -79,16 +73,6 @@ export const Project = {
             validation: (Rule) => Rule
                 .required()
                 .error('A project type is required.')
-        },
-        {
-            title: 'Description',
-            name: 'description',
-            type: 'string',
-            // inputComponent: TextFieldWithMaxCounter,
-            validation: (Rule) => Rule
-                .required()
-                .max(160)
-                .error('A description of no more than 160 characters is required.')
         },
         {
             title: 'Documentation URL',

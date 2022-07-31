@@ -1,0 +1,24 @@
+import { blockField } from "../fields/block";
+import { canaonicalUrlField, datePublishedField, descriptionField, languageField, lastUpdatedField, slugField, titleField } from "../fields/seo";
+
+export const Documentation = {
+    title: 'Documentation',
+    name: 'documentation',
+    type: 'document',
+    fields: [
+        titleField,
+        slugField,
+        descriptionField,
+        languageField,
+        {
+            title: 'Version',
+            name: 'version',
+            type: 'reference',
+            to: [{ type: 'version '}]
+        },
+        canaonicalUrlField,
+        datePublishedField,
+        lastUpdatedField,
+        blockField
+    ]
+}
