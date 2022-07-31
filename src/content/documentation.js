@@ -14,7 +14,7 @@ export const Documentation = {
             title: 'Version',
             name: 'version',
             type: 'reference',
-            to: [{ type: 'version '}]
+            to: [{ type: 'semantic_version'}]
         },
         canaonicalUrlField,
         datePublishedField,

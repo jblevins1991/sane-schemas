@@ -1,6 +1,6 @@
 export const Version = {
     title: 'Version',
-    name: 'version',
+    name: 'semantic_version',
     type: 'document',
     fields: [
         {

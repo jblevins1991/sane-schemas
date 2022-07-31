@@ -1,5 +1,3 @@
-import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
-
 export const Image = {
     title: 'A11y Image',
     name: 'a11y_image',

@@ -2,6 +2,7 @@ export { Author } from './content/author';
 export { Documentation } from './content/documentation';
 export { FAQ } from './content/faq';
 export { Navigation } from './content/navigation';
+export { Page } from './content/page';
 export { Post } from './content/post';
 export { Project } from './content/project';
 

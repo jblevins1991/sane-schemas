@@ -1,6 +1,3 @@
-// import { TextareaWithMaxCounter } from "../inputs/TextareaWithMaxCounter";
-// import { TextFieldWithMaxCounter } from "../inputs/TextFieldWithMaxCounter";
-
 export const Author = {
     title: 'Author',
     name: 'author',
@@ -9,7 +6,8 @@ export const Author = {
         {
             title: 'Avatar',
             name: 'avatar',
-            type: 'a11y_image',
+            type: 'reference',
+            to: [{ type: 'a11y_image' }],
             validation: (Rule) => Rule
                 .required()
                 .error('An avatar image is required')
@@ -18,7 +16,6 @@ export const Author = {
             title: 'Name',
             name: 'name',
             type: 'string',
-            // inputComponent: TextFieldWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .min(2)
@@ -29,7 +26,6 @@ export const Author = {
             title: 'Bio',
             name: 'bio',
             type: 'string',
-            // inputComponent: TextareaWithMaxCounter,
             validation: (Rule) => Rule
                 .required()
                 .min(50)
