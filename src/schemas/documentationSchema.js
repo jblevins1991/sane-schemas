@@ -23,7 +23,6 @@ export const DocumentationSchema = {
     Language,
     Tag,
     Version,
-    TagSchema,
     Carousel,
     Image,
     Variant,

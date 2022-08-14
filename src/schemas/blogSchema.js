@@ -13,7 +13,6 @@ export const BlogSchema = {
     Category,
     Language,
     Tag,
-    TagSchema,
     Carousel,
     Image,
     Variant,
