@@ -17,8 +17,12 @@ export const Documentation = {
             to: [{ type: 'semantic_version'}]
         },
         canaonicalUrlField,
-        datePublishedField,
-        lastUpdatedField,
+        {
+            title: 'Author',
+            name: 'author',
+            type: 'reference',
+            to: [{ type: 'author' }],
+        },
         blockField
     ]
 }

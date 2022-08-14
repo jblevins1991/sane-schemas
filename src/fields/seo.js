@@ -48,26 +48,5 @@ export const languageField = {
 export const canaonicalUrlField = {
     title: 'Canonical URL',
     name: 'canonical_url',
-    type: 'string'
-};
-
-export const datePublishedField = {
-    title: 'Date Published',
-    name: 'date_published',
-    type: 'date',
-    validation: (Rule) => Rule
-        .required()
-        .error('Date published is required.'),
-    initialValue: (new Date()).toISOString(),
-};
-
-export const lastUpdatedField = {
-    title: 'Last Updated',
-    name: 'last_updated',
-    type: 'date',
-    validation: (Rule) => Rule
-        .required()
-        .min(Rule.valueOfField('date_published'))
-        .error('Last Updated is required.'),
-    initialValue: (new Date()).toISOString(),
+    type: 'url'
 };

@@ -11,8 +11,6 @@ export const Page = {
         descriptionField,
         languageField,
         canaonicalUrlField,
-        datePublishedField,
-        lastUpdatedField,
         blockField
     ]
 }

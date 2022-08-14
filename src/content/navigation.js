@@ -5,9 +5,9 @@ export const Navigation = {
     fields: [
         {
             title: 'Navigation Links',
-            name: 'navigationLinks',
+            name: 'navigation_links',
             type: 'array',
-            of: [{ type: 'navigation-item' }]
+            of: [{ type: 'navigation_item' }]
         }
     ]
 }

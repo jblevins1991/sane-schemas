@@ -2,7 +2,7 @@ import { languageField, slugField } from "../fields/seo";
 
 export const NavigationItem = {
     title: 'Navigation Item',
-    name: 'navigation-item',
+    name: 'navigation_item',
     type: 'document',
     fields: [
         slugField,
@@ -26,9 +26,9 @@ export const NavigationItem = {
         },
         {
             title: 'Navigation Links',
-            name: 'navigationLinks',
+            name: 'navigation_links',
             type: 'array',
-            of: [{ type: 'navigation-item' }]
+            of: [{ type: 'navigation_item' }]
         }
     ]
 }

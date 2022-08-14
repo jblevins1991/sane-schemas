@@ -14,8 +14,6 @@ export const Post = {
         descriptionField,
         languageField,
         canaonicalUrlField,
-        datePublishedField,
-        lastUpdatedField,
         {
             title: 'Thumbnail',
             name: 'thumbnail',

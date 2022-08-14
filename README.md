@@ -7,12 +7,22 @@ These schemas are to make sanity live up to its name. They include ADA considera
 Content schemas are for short-form and long-form content like pages.
 
 - Author - The author of a post or a project.
+- Documentation - A version and language controlled page type for documentation.
 - FAQ - Frequently asked questions contains the question, answer, and number of times asked.
+- Navigation: A version and language controlled page type for site navigation.
+- NavigationItem: A navigation item that also can have child navigation items for super navs.
 - Post - A blog post that an author has written.
-- Product - A master product type that contains the common information about your product (e.g. name, description, upc).
 - Project - An open-source project template that contains urls to documentation, artifact hosting, and an article about building it.
-- Product Variant - A variant product type that contains the variation images, price, sku, etc.
-- Review - A product review.
+
+## Fields
+
+Fields that may be useful when building your content out.
+
+- title: A string field built for page title. It has validation for seo best-practices.
+- slug: A simple slug field.
+- description: A string field built for page description. It has validation for seo best-practices.
+- language: A reference field to the Language schema.
+- canonical_url: A url field for canonical url metadata for a page.
 
 ## Global Schemas
 
@@ -21,6 +31,7 @@ Global schemas are types that are used in nearly any top level document.
 - Category - Categories allow better filtering of posts and products.
 - Language - Language unlocks internationalization of posts and products.
 - Tag - Tag allows better filtering of posts and products.
+- Version - Version allows you to keep many versions of the same document.
 
 ## Media Schemas
 
@@ -36,7 +47,7 @@ Complete schemas are the fastest way for you to use our schema types. They are c
 
 - Blog Schema - The Author, Post, Category, Language, Tag, Carousel, Image, and Variant schemas bundled together to give you blogging capabilities with one line of code.
 
-- Product Schema - The Product, Product Variant, Review, Category, Language, Tag, Carousel, Image, and Variant schemas bundled together to give you ecommerce product capabilities with one line of code.
+- Documentation Schema - The Author, Documentation, FAQ, Navigation, NavigationItem, Post, Category, Language, Tag, and Version schemas bundled together to give you documentation capabilities with one line of code.
 
 ## Paginating Schemas
 
