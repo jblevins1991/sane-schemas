@@ -5,6 +5,12 @@ export const NavigationItem = {
     name: 'navigation_item',
     type: 'document',
     fields: [
+        {
+            title: 'Label',
+            name: 'label',
+            type: 'string'
+        },
+        languageField,
         slugField,
         {
             title: 'Version',
@@ -12,12 +18,6 @@ export const NavigationItem = {
             type: 'reference',
             to: [{ type: 'semantic_version' }]
         },
-        {
-            title: 'Label',
-            name: 'label',
-            type: 'string'
-        },
-        languageField,
         {
             title: 'Document',
             name: 'document',
